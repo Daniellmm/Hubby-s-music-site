@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&display=swap');
+
+:root{
+    --main-color: #0C4A60;
+    --primary-color-1: #EF6C33;
+    --primary-color-2: #ABDFF1;
+    --primary-color-3: #E1DDDB;
+    --black: #13131a;
+    --box-shadow: 0.5 1rem rgba(31, 30, 30, 0.1);
+}
+
+*{
+    font-family: 'Playfair Display', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    list-style: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section{
+    padding: 3rem 7%;
+}
+
+.btn{
+    margin-top: 1rem;
+    background: var(--primary-color-1);
+    color: #fff;
+    display: inline-block;
+    border-radius: 5rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 4rem;
+    font-size: 1.7rem;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+.btn::before,
+.btn::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0%;background: var(--main-color);
+    z-index: -1;
+    transition: .3s linear;
+}
+
+.btn::after{
+    right: 0;
+}
+
+.btn::before{
+    left: 0;
+}
+
+.btn:hover::before,
+.btn:hover::after{
+    width: 100%;
+}
+
+.heading{
+    font-size: 4rem;
+    margin: 2rem 0;
+    color: var(--primary-color-1);
+    text-align: center;
+}
+
+/* header */
+.header{
+    position: fixed;
+    top: 0;left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    background: var(--primary-color-3);
+    box-shadow: var(--box-shadow);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo span{
+    color: var(--primary-color-1);
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 2rem;
+}
+
+.header .navbar a:hover{
+    color: var(--primary-color-1);
+}
+
+#menu{
+    color: var(--black);
+    cursor: pointer;
+    display: none;
+    font-size: 2.5rem;
+}
+
+/* end */
+
+/* home */
+.home{
+    display: flex;
+    align-items: center;
+    background: url(./images/music.jpg) no-repeat;
+    min-height: 110vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 8rem;
+    color: var(--main-color);
+    line-height: 1.2;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+
+}
+
+/* end */
+
+/* about */
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about .row .content{
+    flex: 1 1 40rem;
+}
+
+.about .row .content h1{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    padding: 1rem 0;
+}
+
+.about .row .content p{
+    font-size: 1.4rem;
+    color: var(--black);
+    padding: 1rem 0;
+    line-height: 2;
+}
+.about .row .image{
+    flex: 1 1 30rem;
+}
+
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4%;
+}
+/* end */
+
+/* platform */
+
+.platform{
+    overflow: hidden;
+    align-items: center;
+    min-height: 30vh;
+    background: var(--primary-color-3);
+}
+.platform .row{
+    display: flex;
+    gap: 4rem;
+    overflow-x: auto;
+}
+
+.platform .row img{
+    height: 30rem;
+}
+
+/* end */
+
+
+
+/* song */
+.songs{
+    min-height: 100vh;
+    /* background: url(./images/song.jpg) no-repeat;
+    background-size: cover;
+    background-position: left; */
+}
+
+.songs .row{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 50px;
+    
+}
+
+
+.songs .row .image {
+    flex: 170rem
+}
+
+.songs .row .image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4%;
+    flex: 1 1 30rem;
+}
+
+.songs .row .content h2 {
+    font-size: 4.5rem;
+    color: var(--main-color);
+    padding: 1rem 0;
+}
+
+.songs .row .content p {
+    font-size: 1.4rem;
+    color: var(--black);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.songs .row .content .download{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* end */
+
+
+/* gallery */
+
+.gallery{
+    background: var(--primary-color-3);
+    min-height: 100vh;
+}
+
+.gallery .controls{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.gallery .controls .button{
+    height: 4rem;
+    width: 16rem;
+    background-color: #fff;
+    color: var(--primary-color-1);
+    font-size: 2rem;
+    line-height: 4rem;
+    cursor: pointer;
+    margin: 1rem;
+    box-shadow: var(--main-color);
+    align-items: center;
+    text-align: center;
+}
+
+.gallery .box-container{
+    display: flex;
+    flex-direction: row;
+    max-height: 30rem;
+}
+
+.gallery .box-container .image-music img{
+    min-height: 30px;
+}
+
+/* end */
+
+
+
+
+/* contact */
+
+.contact{
+    background: var(--primary-color-3);
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .image{
+    flex: 1 1  30rem;
+}
+
+.contact .row .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4%;
+}
+
+
+.contact .row form{
+    flex:  1 1 50rem;
+    padding: 5rem;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea{
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.3);
+    border-radius: .5rem;
+    width: 49%;
+}
+
+.contact .row form textarea{
+    width: 100%;
+    resize: none;
+    height: 15rem;
+}
+
+
+/* end */
+
+
+/* footer */
+
+.footer{
+    
+    text-align: center;
+}
+
+.footer .share{
+    padding: 1rem;
+}
+
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--main-color);
+    border: .1rem solid var(--main-color);
+    margin: .3rem;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.footer .share a:hover{
+    color: #fff;
+    background: var(--main-color);
+}
+
+.footer .credit{
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1.5rem;
+}
+
+.footer .credit span{
+    color: var(--primary-color-1);
+    font-weight: bold;
+}
+
+
+
+/* end */
