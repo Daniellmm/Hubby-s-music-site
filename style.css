@@ -256,7 +256,7 @@ section{
 
 .gallery{
     background: var(--primary-color-3);
-    min-height: 100vh;
+    align-items: center;
 }
 
 .gallery .controls{
@@ -282,13 +282,23 @@ section{
 }
 
 .gallery .box-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
     flex-direction: row;
-    max-height: 30rem;
+    width: 100%;
+    margin: auto;
 }
 
-.gallery .box-container .image-music img{
-    min-height: 30px;
+.gallery .box-container .pic{
+    height: 500px;
+}
+
+
+.gallery .box-container .pic a img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* end */
