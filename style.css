@@ -220,7 +220,7 @@ section{
 
 
 .songs .row .image {
-    flex: 170rem
+    flex: 90rem
 }
 
 .songs .row .image img{
@@ -312,9 +312,6 @@ section{
 
 /* contact */
 
-.contact{
-    /* background: var(--primary-color-3); */
-}
 
 .contact .row{
     display: flex;
@@ -429,7 +426,7 @@ section{
     }
 }
 
-@media (max-width: 695px){
+@media (max-width: 720px){
     #menu{
         display: inline-block;
     }
@@ -449,8 +446,112 @@ section{
         transition: .4s linear;
     }
 
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        display: block;
+    }
+
+    .home{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .home .content .btn{
+        margin-top: 5rem;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+
+    }
+
+    .about{
+        justify-content: center;
+        text-align: center;
+    }
+
+    .songs .row{
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .songs .row .image{
+        flex: 50rem;
+    }
+
+    .gallery .box-container{
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 570px){
+    html{
+        font-size: 50%;
+    }
+
+    .home{
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .home .content .btn{
+        margin-top: 5rem;
+    }
+
+    .about{
+        justify-content: center;
+        text-align: center;
+    }
 
 
+    .platform .row{
+        gap: 1rem;
+    }
+
+    .platform .row img{
+        height: 20rem;
+    }
+
+    .songs .row{
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .songs .row .image{
+        flex: 50rem;
+    }
+
+
+    .gallery .box-container{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .row form .inputBox{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact .row form .inputBox input{
+        width: 100%;
+    }
+ 
 }
 
 
